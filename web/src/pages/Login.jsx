@@ -1,4 +1,4 @@
-﻿import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../AuthContext';
 import api from '../api';
 import { Box, Button, TextField, Typography, Paper, Alert } from '@mui/material';
@@ -20,8 +20,8 @@ function Login() {
   };
 
   return (
-    <Box display="flex" justifyContent="center" mt={8}>
-      <Paper elevation={3} sx={{ p: 4, width: 400 }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 8, width: '100%' }}>
+      <Paper elevation={3} sx={{ p: 4, width: '100%', maxWidth: 400, mx: 'auto' }}>
         <Typography variant="h5" mb={3} textAlign="center">Login</Typography>
         {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}
         <form onSubmit={handleSubmit}>
